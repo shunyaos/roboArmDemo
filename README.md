@@ -1,46 +1,16 @@
 Robotic ARM on Hikey 970
 =============================
-Motion detection on Hikey-960 allows user to detect motion at any remote location. It also sends images back to the user if a motion is detected with the help of MQTT.
+This project contains demo code to interface and run Robotic Arm on Hikey 970. 
 
 Hardware required:
 ------------------
 
-  * Hikey 960
-  * USB Video Camera
-  * PC
+  * Hikey 970
+  * U-Arm Swift Pro
 
-Pre-requisites for Hikey960:
+Pre-requisites for Hikey970:
 ----------------------------
-This project has these software pre-requisites to run on Hikey960
-
-  * paho-mqtt
-  * python3
-  * python3-pip
-  * OpenCV on python3
-  
-Except for OpenCV on python3 all the other pre-requisites can be installed by running these commands
-
-```
-$ sudo apt-get update
-$ sudo apt install python3-dev python3-pip
-$ pip3 install imutils paho-mqtt
-```
-
-Pre-requisites for PC/Laptop:
------------------------------
-This project has these software pre-requisites to run on PC/Laptop.
-
-  * paho-mqtt
-  * python3
-  * python3-pip
-  
-All the pre-requisites can be installed by running these commands
-
-```
-$ sudo apt-get update
-$ sudo apt install python3-dev python3-pip
-$ pip3 install paho-mqtt
-```
+For this project to run you need to flash Lebian 9 with u-Arm support.
 
 Steps for the Motion Detection Demo:
 ------------------------------------
@@ -49,26 +19,26 @@ We assume that you have already installed the pre-requisites before following th
 
 Step 1 : Cloning the Project
 ----------------------------
-on PC/Laptop run command to clone this project
+on Hikey970 run command to clone this project
 ```
-$ git clone https://github.com/shunyaos/motion_detection.git
+$ git clone https://github.com/shunyaos/roboArmDemo.git
 ```
-on Hikey960 run command to clone this project
-```
-$ git clone https://github.com/shunyaos/motion_detection.git
-```
-Step 2: Starting MQTT on PC/Laptop
+Step 2: Connect the Robotic Arm
 ----------------------------------
-Run the mqtt_client_demo.py present in the pc folder
+Connect the Robotic Arm to Hikey970
+And power on.
+
+Step 3: Setup
+----------------------------------
+Run these commands
 ```
-$ cd motion_detection/pc
-$ python3 mqtt_client_demo.py
+$ cd roboArmDemo
+$ ./setup.sh
 ```
-Step 3: Starting the Demo on Hikey960
+Step 4: Starting the Demo on Hikey970
 -------------------------------------
 Run the Demo program
 ```
-$ python3 motion_detector.py
+$ python3 pick-place.py
 ```
-As soon as you run the code the first frame is taken as frame of reference. 
-As any motion is detected from the first frame of reference it captures an image and sends it back to the user through MQTT.
+As soon as you run the code your Robotic Arm should move.
