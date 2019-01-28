@@ -11,6 +11,7 @@ Hardware required:
 Pre-requisites for Hikey970:
 ----------------------------
 For this project to run you need to flash Lebian 9 with u-Arm support.
+Please downolad it from this link - https://www.dropbox.com/s/ushxts1u2fs0djv/hikey970-lebian-9-uArm.tar.gz?dl=0
 
 Steps for the Motion Detection Demo:
 ------------------------------------
