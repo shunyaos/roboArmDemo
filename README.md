@@ -1,45 +1,49 @@
-Robotic ARM on Hikey 970
-=============================
-This project contains demo code to interface and run Robotic Arm on Hikey 970. 
+# Robotic ARM Demo on Shunya OS
 
-Hardware required:
-------------------
+This project contains demo code to interface and run Robotic Arm on a
+board with Shunya OS.
 
-  * Hikey 970
-  * U-Arm Swift Pro
+## Hardware required:
 
-Pre-requisites for Hikey970:
-----------------------------
-For this project to run you need to flash Lebian 9 with u-Arm support.
-Please downolad it from this link - https://www.dropbox.com/s/ushxts1u2fs0djv/hikey970-lebian-9-uArm.tar.gz?dl=0
+  - SBC with Shunya OS
+  - U-Arm Swift Pro
 
-Steps for the Motion Detection Demo:
-------------------------------------
-To run Run a demo of this project please follow these steps.
-We assume that you have already installed the pre-requisites before following these steps
+## Software required:
 
-Step 1 : Cloning the Project
-----------------------------
-on Hikey970 run command to clone this project
-```
-$ git clone https://github.com/shunyaos/roboArmDemo.git
-```
-Step 2: Connect the Robotic Arm
-----------------------------------
-Connect the Robotic Arm to Hikey970
-And power on.
+  - git
 
-Step 3: Setup
-----------------------------------
+To install git you can use the following command:
+
+    $ sudo opkg install git
+
+## Steps for running the Motion Detection Demo:
+
+To run Run a demo of this project please follow these steps. We assume
+that you have already installed the pre-requisites before following
+these steps
+
+## Step 1 : Cloning the Project
+
+On Shunya OS run command to clone this project
+
+    $ git clone https://github.com/shunyaos/roboArmDemo.git
+
+## Step 2: Connect the Robotic Arm
+
+Connect the Robotic Arm to the board with Shunya OS and power on the
+robotic arm.
+
+## Step 3: Setup
+
 Run these commands
-```
-$ cd roboArmDemo
-$ ./setup.sh
-```
-Step 4: Starting the Demo on Hikey970
--------------------------------------
+
+    $ cd roboArmDemo
+    $ ./setup.sh
+
+## Step 4: Starting the Demo
+
 Run the Demo program
-```
-$ python3 pick-place.py
-```
+
+    $ python3 pick-place.py
+
 As soon as you run the code your Robotic Arm should move.
