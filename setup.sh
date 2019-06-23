@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# insert kernel driver
-# this driver is already placed inside lebian-9-uarm
-# for more Please contact Lemaker support
-
-sudo insmod /lib/modules/cdc-acm.ko
-
 # install u-Arm python SDK
 # install instructions are given on the uArm-Python-SDK Repository
 
